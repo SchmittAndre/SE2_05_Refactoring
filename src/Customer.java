@@ -13,7 +13,6 @@ class Customer {
         return name;
     };
     public String statement() {
-        double totalAmount = 0;
         Enumeration<Rental> enum_rentals = rentals.elements();
         String result = "Rental Record for " + this.getName() + "\n";
         result += "\t" + "Title" + "\t" + "\t" + "Days" + "\t" + "Amount" + "\n";
