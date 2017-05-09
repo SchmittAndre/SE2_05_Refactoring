@@ -1,3 +1,4 @@
+package main2;
 /**
  * Created with IntelliJ IDEA.
  * User: Berkling

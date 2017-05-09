@@ -1,3 +1,4 @@
+package main2;
 class Rental {
     private Movie movie;
     private int daysRented;
