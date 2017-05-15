@@ -4,19 +4,26 @@ import java.util.*;
 class Customer {
     private String name;
     private Vector<Rental> rentals = new Vector<Rental>();
-    public Customer (String newname){
+    public Customer (String newname)
+    {
         name = newname;
     };
-    public void addRental(Rental arg) {
+    
+    public void addRental(Rental arg) 
+    {
         rentals.addElement(arg);
     };
-    public String getName (){
+    
+    public String getName ()
+    {
         return name;
     };
-    public String statement() {
+    
+    public String getstatement() 
+    {
         Enumeration<Rental> enum_rentals = rentals.elements();
         String result = "Rental Record for " + this.getName() + "\n";
-        result += "\t" + "Title" + "\t" + "\t" + "Days" + "\t" + "Amount" + "\n";
+        result += "\tTitle\t\tDays\tAmount\n";
 
         while (enum_rentals.hasMoreElements()) {
             Rental each = (Rental) enum_rentals.nextElement();
@@ -43,20 +50,24 @@ class Customer {
 //    it, but you will then be in a much better position to do something about it, and you will have more
 //    options to optimize effectively (see the discussion on page 69).
 
-    private double getTotalCharge() {
+    private double getTotalCharge() 
+    {
         double result = 0;
         Enumeration<Rental> enum_rentals = rentals.elements();
-        while (enum_rentals.hasMoreElements()) {
+        while (enum_rentals.hasMoreElements()) 
+        {
             Rental each = (Rental) enum_rentals.nextElement();
             result += each.getCharge();
         }
         return result;
     }
 
-    private int getTotalFrequentRenterPoints(){
+    private int getTotalFrequentRenterPoints()
+    {
         int result = 0;
         Enumeration<Rental> enum_rentals = rentals.elements();
-        while (enum_rentals.hasMoreElements()) {
+        while (enum_rentals.hasMoreElements()) 
+        {
             Rental each = (Rental) enum_rentals.nextElement();
             result += each.getFrequentRenterPoints();
         }
